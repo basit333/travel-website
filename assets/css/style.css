@@ -1,0 +1,389 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #17181a;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  position: absolute;
+}
+
+/* logo */
+#logo {
+  color: #fff;
+  font-family: "Abril Fatface";
+}
+
+/* nav-header */
+.nav-header {
+  min-height: 10vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  z-index: 2;
+  position: relative;
+}
+
+/* navbar */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+
+/* nav-links */
+.nav-links {
+  font-family: "Abril Fatface";
+  font-size: 4rem;
+  flex-basis: 30rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  line-height: 10rem;
+  text-decoration: none;
+  background-color: #000;
+  background-size: 100% 200%;
+  background-position: top;
+  transition: all 0.5s linear;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links .twitter:hover {
+  background-image: linear-gradient(to top, #00acee 50%, #000 50%);
+  background-position: bottom;
+}
+
+.nav-links .youtube:hover {
+  background-image: linear-gradient(to top, #c4302b 50%, #000 50%);
+  background-position: bottom;
+}
+
+.nav-links .instagram:hover {
+  background-image: linear-gradient(to top, #ff69b4 50%, #000 50%);
+  background-position: bottom;
+}
+
+.contact {
+  flex-basis: 30rem;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+/* hamburger lines */
+.line1,
+.line2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #fff;
+  pointer-events: none;
+}
+
+/* burger */
+.burger {
+  cursor: pointer;
+}
+
+/* slides */
+.slide {
+  min-height: 100vh;
+  margin: 0 auto 30px auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+/* hero-desc */
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-basis: 25rem;
+  padding-left: 5rem;
+  position: relative;
+}
+
+.hero-desc h2 {
+  font-family: "Abril Fatface";
+  font-size: 5rem;
+}
+
+.hero-desc p {
+  padding: 3rem 0;
+  font-size: 1.5rem;
+  color: rgb(223, 223, 223);
+}
+
+.explore {
+  padding: 1rem 2rem;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+/* hero-img */
+.hero-img {
+  position: relative;
+  flex: 1;
+  flex-basis: 25rem;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* reveal img and reveal text */
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  top: -15%;
+  left: 0;
+  background: #17181a;
+}
+
+/* cursor */
+.cursor {
+  width: 4rem;
+  height: 4rem;
+  border: 4px solid lightcoral;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s linear;
+  transition-property: border, transform;
+  transform-origin: 95% 95%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.cursor.nav-active {
+  transform: scale(2);
+  opacity: 0.5;
+}
+
+.cursor.explore-active {
+  transform: scale(2);
+  background: rgb(86, 124, 228);
+  opacity: 0.5;
+}
+
+.title .animated-text {
+  background-size: 100% 200%;
+  background-position: top;
+  transition: background-position 1s;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.title .animated-text.swipe {
+  background-position: bottom;
+}
+
+.animated-text-blue {
+  background-image: linear-gradient(to top, rgb(86, 124, 228) 50%, white 50%);
+}
+
+.animated-text-purple {
+  background-image: linear-gradient(to top, rgb(167, 110, 231) 50%, white 50%);
+}
+
+.animated-text-orange {
+  background-image: linear-gradient(to top, rgb(255, 139, 93) 50%, white 50%);
+}
+
+/* span text color */
+
+.mountain-span {
+  color: rgb(86, 124, 228);
+}
+
+.hike-span {
+  color: rgb(167, 110, 231);
+}
+
+.fashion-span {
+  color: rgb(255, 139, 93);
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+body.hide {
+  overflow: hidden;
+}
+
+/* Other Page */
+.fashion-1,
+.fashion-2,
+.fashion-3 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.fashion-img {
+  height: 70vh;
+  flex-basis: 30rem;
+}
+
+.fashion-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+}
+
+.fashion-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fashion-text h1 {
+  font-size: 6rem;
+  padding: 5rem 0rem;
+}
+
+.fashion-1 h1 {
+  color: rgb(255, 139, 93);
+}
+
+.fashion-2 h1 {
+  color: rgb(167, 110, 231);
+}
+
+.fashion-3 h1 {
+  color: rgb(86, 124, 228);
+}
+
+.fashion-text p {
+  font-size: 2rem;
+  padding: 0 2rem 0rem 0rem;
+  margin-bottom: 10rem;
+}
+
+.fashion-num {
+  font-size: 15rem;
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  color: white;
+  opacity: 0.8;
+}
+
+.fashion-num--orange {
+  color: rgb(255, 139, 93);
+}
+
+.fashion-num--purple {
+  color: rgb(167, 110, 231);
+}
+
+.fashion-num--blue {
+  color: rgb(86, 124, 228);
+}
+
+.swipe-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.swipe1 {
+  background: rgb(167, 110, 231);
+  z-index: 5;
+}
+
+.swipe2 {
+  background: rgb(86, 124, 228);
+  z-index: 4;
+}
+
+.swipe3 {
+  background: rgb(255, 139, 93);
+  z-index: 3;
+}
+
+@media (max-width: 1500px) {
+  .hero-img {
+    height: 50vh;
+  }
+  .fashion-text h1 {
+    font-size: 2rem;
+    padding: 1rem 0rem;
+  }
+  .fashion-text p {
+    font-size: 1.2rem;
+  }
+  .fashion-img img {
+    height: 50vh;
+    width: 100%;
+    object-position: top;
+  }
+
+  .fashion-num {
+    font-size: 10rem;
+    left: 45%;
+    bottom: 25%;
+  }
+}
